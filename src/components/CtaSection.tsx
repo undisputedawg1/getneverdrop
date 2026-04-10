@@ -11,7 +11,7 @@ const CtaSection = () => (
         <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-bold text-base px-8 py-6">
           Schedule Your Demo
         </Button>
-        <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-bold text-base px-8 py-6 border-2 border-background">
+        <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-bold text-base px-8 py-6">
           Book a Consultation
         </Button>
       </div>
