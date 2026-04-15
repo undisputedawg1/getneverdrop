@@ -31,7 +31,7 @@ const TestimonialsSection = () => (
     <div className="container space-y-12">
       <div className="text-center max-w-2xl mx-auto space-y-3">
         <h2 className="font-heading text-3xl md:text-5xl text-foreground">What Our Partners Say</h2>
-        <p className="text-muted-foreground text-base md:text-lg">Real results from Canadian locksmith businesses</p>
+        <p className="text-muted-foreground text-base md:text-lg">Real results from locksmith businesses</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
