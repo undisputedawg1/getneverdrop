@@ -9,7 +9,7 @@ const HeroSection = () => (
           Never Miss Another Emergency Call
         </h1>
         <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-          Your 24/7 AI Locksmith Assistant is here. Empower your Canadian locksmith business with an AI that answers, books, and never sleeps—turning missed calls into booked jobs.
+          Your 24/7 AI Locksmith Assistant is here. Empower your locksmith business with an AI that answers, books, and never sleeps—turning missed calls into booked jobs.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a href="#cta">
