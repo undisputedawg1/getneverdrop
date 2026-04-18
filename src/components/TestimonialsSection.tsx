@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Since implementing VoiceAI's Voice AI agent, our after-hours bookings have skyrocketed by 30%. We're capturing leads we never could before, directly impacting our bottom line!",
+    quote: "Since implementing Never Drop AI's voice agent, our after-hours bookings have skyrocketed by 30%. We're capturing leads we never could before, directly impacting our bottom line!",
     author: "John D.",
     title: "Owner, Apex Locksmith Services, Toronto",
   },

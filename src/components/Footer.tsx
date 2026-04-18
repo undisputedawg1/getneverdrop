@@ -9,7 +9,7 @@ const Footer = () => (
     <div className="container">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-10">
         <div>
-          <h3 className="font-heading text-lg text-background mb-2">VoiceAI</h3>
+          <h3 className="font-heading text-lg text-background mb-2">Never Drop AI</h3>
           <p className="text-sm">Your 24/7 AI locksmith assistant.</p>
         </div>
         {footerCols.map((col) => (
@@ -26,7 +26,7 @@ const Footer = () => (
         ))}
       </div>
       <div className="border-t border-muted-foreground/20 pt-8 text-center text-xs">
-        © 2026 VoiceAI. All rights reserved. Serving locksmith businesses worldwide.
+        © 2026 Never Drop AI. All rights reserved. Serving locksmith businesses worldwide.
       </div>
     </div>
   </footer>
