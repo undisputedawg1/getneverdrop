@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#" className="font-heading text-xl font-bold text-primary">VoiceAI</a>
+        <a href="#" className="font-heading text-xl font-bold text-primary">Never Drop AI</a>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (

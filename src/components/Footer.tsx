@@ -26,7 +26,7 @@ const Footer = () => (
         ))}
       </div>
       <div className="border-t border-muted-foreground/20 pt-8 text-center text-xs">
-        © 2026 VoiceAI. All rights reserved. Serving locksmith businesses worldwide.
+        © 2026 Never Drop AI. All rights reserved. Serving locksmith businesses worldwide.
       </div>
     </div>
   </footer>
