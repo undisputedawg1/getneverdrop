@@ -8,12 +8,16 @@ const CtaSection = () => (
         Schedule a personalized demo to see how our Voice AI agent can transform your locksmith business. Our team will show you exactly how much revenue you're currently losing and how we can help you capture every call.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-        <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-bold text-base px-8 py-6">
-          Schedule Your Demo
-        </Button>
-        <Button size="lg" className="bg-white text-primary border-2 border-white hover:bg-white/90 font-bold text-base px-8 py-6">
-          Book a Consultation
-        </Button>
+        <a href="https://calendly.com/tashm-thekairos/30min" target="_blank" rel="noopener noreferrer">
+          <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-bold text-base px-8 py-6">
+            Schedule Your Demo
+          </Button>
+        </a>
+        <a href="https://calendly.com/tashm-thekairos/30min" target="_blank" rel="noopener noreferrer">
+          <Button size="lg" className="bg-white text-primary border-2 border-white hover:bg-white/90 font-bold text-base px-8 py-6">
+            Book a Consultation
+          </Button>
+        </a>
       </div>
     </div>
   </section>
