@@ -10,7 +10,7 @@ const CALENDLY_URL = "https://calendly.com/tashm-thekairos/30min";
 
 interface CalculatorData {
   callsPerWeek: number;
-  missedPercent: number;
+  missedCalls: number;
   avgJobValue: number;
   email: string;
 }
@@ -23,13 +23,13 @@ const MissedCallCalculator = () => {
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState<CalculatorData>({
     callsPerWeek: 20,
-    missedPercent: 25,
+    missedCalls: 5,
     avgJobValue: 150,
     email: "",
   });
 
   const calculateResults = () => {
-    const missedCallsPerWeek = (formData.callsPerWeek * formData.missedPercent) / 100;
+    const missedCallsPerWeek = Math.min(formData.missedCalls, formData.callsPerWeek);
     const missedCallsPerMonth = missedCallsPerWeek * 4.33;
     const missedCallsPerYear = missedCallsPerWeek * 52;
     // Assume ~75% of missed calls would have converted to a job
@@ -48,7 +48,7 @@ const MissedCallCalculator = () => {
     const payload = {
       email: formData.email,
       calls_per_week: formData.callsPerWeek,
-      missed_percent: formData.missedPercent,
+      missed_calls_per_week: formData.missedCalls,
       avg_job_value: formData.avgJobValue,
       calculated_loss_monthly: lostMonthly,
       calculated_loss_yearly: lostYearly,
@@ -104,15 +104,14 @@ const MissedCallCalculator = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="missed">What % of calls do you miss? (after hours, busy, etc.)</Label>
+              <Label htmlFor="missed">How many calls do you miss per week? (after hours, busy, etc.)</Label>
               <Input
                 id="missed"
                 type="number"
                 min={0}
-                max={100}
-                value={formData.missedPercent}
+                value={formData.missedCalls}
                 onChange={(e) =>
-                  setFormData({ ...formData, missedPercent: Number(e.target.value) || 0 })
+                  setFormData({ ...formData, missedCalls: Number(e.target.value) || 0 })
                 }
               />
             </div>
