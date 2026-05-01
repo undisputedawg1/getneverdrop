@@ -22,9 +22,9 @@ const MissedCallCalculator = () => {
   const [step, setStep] = useState<"form" | "email" | "results">("form");
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState<CalculatorData>({
-    callsPerWeek: 20,
-    missedCalls: 5,
-    avgJobValue: 150,
+    callsPerWeek: 0,
+    missedCalls: 0,
+    avgJobValue: 0,
     email: "",
   });
 
@@ -79,9 +79,6 @@ const MissedCallCalculator = () => {
       {step === "form" && (
         <div className="space-y-6">
           <div className="text-center space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-              <AlertTriangle className="w-4 h-4" /> Missed Call Audit
-            </div>
             <h3 className="font-heading text-2xl md:text-3xl text-foreground">
               Calculate Your Lost Revenue
             </h3>
@@ -97,7 +94,8 @@ const MissedCallCalculator = () => {
                 id="calls"
                 type="number"
                 min={1}
-                value={formData.callsPerWeek}
+                placeholder="e.g. 20"
+                value={formData.callsPerWeek || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, callsPerWeek: Number(e.target.value) || 0 })
                 }
@@ -109,7 +107,8 @@ const MissedCallCalculator = () => {
                 id="missed"
                 type="number"
                 min={0}
-                value={formData.missedCalls}
+                placeholder="e.g. 5"
+                value={formData.missedCalls || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, missedCalls: Number(e.target.value) || 0 })
                 }
@@ -121,7 +120,8 @@ const MissedCallCalculator = () => {
                 id="value"
                 type="number"
                 min={0}
-                value={formData.avgJobValue}
+                placeholder="e.g. 150"
+                value={formData.avgJobValue || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, avgJobValue: Number(e.target.value) || 0 })
                 }
